@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Estratégico de Café Morichal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#6A4A3C] text-white p-6 shadow-lg text-center">
+        <h1 class="text-4xl font-black tracking-tight">Análisis Estratégico de Café Morichal</h1>
+        <p class="mt-2 text-lg text-[#EDC951]">Navegando el Dinámico Mercado del Café en Venezuela</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="market-context" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">El Panorama del Café Venezolano</h2>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                Venezuela vive un auténtico "boom" del café, una tendencia que ha transformado el consumo en una experiencia cultural y técnica. Este nuevo escenario presenta tanto oportunidades como desafíos, con un mercado saturado y un consumidor con un paladar muy definido.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">El Paladar Venezolano: Fuerte y Decidido</h3>
+                    <div class="chart-container">
+                        <canvas id="consumerPreferenceChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-sm">
+                        Un abrumador 80-90% de los consumidores en Venezuela prefiere un café con un perfil de sabor fuerte y con cuerpo, un dato clave que dicta la estrategia de producto.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Un Mercado Competitivo</h3>
+                    <div class="chart-container">
+                        <canvas id="marketBrandsChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-sm">
+                        Con más de 417 marcas registradas legalmente y una estimación de casi 1,000 marcas en total (incluyendo artesanales), la competencia es intensa.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="morichal-strategy" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">La Estrategia de Morichal: Consistencia y Volumen</h2>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                Frente a un mercado complejo, Café Morichal adopta una estrategia enfocada en la consistencia del sabor y la garantía de suministro a largo plazo. La clave es un blend meticulosamente equilibrado para satisfacer al paladar mayoritario y asegurar la escalabilidad.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">El Blend de Origen Dual</h3>
+                     <div class="chart-container">
+                        <canvas id="blendCompositionChart"></canvas>
+                    </div>
+                     <p class="text-center mt-4 text-sm">
+                        La mezcla se compone de un 60% de Occidente para asegurar el volumen futuro y un 40% de Oriente para aportar las características de sabor deseadas.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Justificación de la Producción</h3>
+                     <div class="chart-container">
+                        <canvas id="regionalProductionChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-sm">
+                        El estado Lara (Occidente) produce el 28% del café del país, más del doble que los tres estados orientales combinados (14%), justificando su rol mayoritario en el blend.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coffee-fundamentals" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">La Ciencia Detrás del Sabor</h2>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                Entender el producto base es fundamental. La calidad del café venezolano está marcada por los tipos de grano predominantes y los desafíos históricos que ha enfrentado la industria, como la enfermedad de la Roya, que redefinió el panorama genético del café.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold text-center mb-4">Arábica vs. Robusta: El Duelo de Tipos</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="py-2 px-4 bg-[#EB6841] text-white font-bold uppercase text-sm border-b">Característica</th>
+                                <th class="py-2 px-4 bg-[#00A0B0] text-white font-bold uppercase text-sm border-b">Arábica</th>
+                                <th class="py-2 px-4 bg-[#CC333F] text-white font-bold uppercase text-sm border-b">Robusta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-2 px-4 border-b font-bold">Altura de Cultivo</td>
+                                <td class="py-2 px-4 border-b">> 1,000 msnm</td>
+                                <td class="py-2 px-4 border-b">Baja Altura</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-2 px-4 border-b font-bold">Perfil de Sabor</td>
+                                <td class="py-2 px-4 border-b">Fino, complejo, aromático</td>
+                                <td class="py-2 px-4 border-b">Malo, terroso, astringente</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-2 px-4 border-b font-bold">Contenido de Cafeína</td>
+                                <td class="py-2 px-4 border-b">Bajo a Medio (aprox. 1.5%)</td>
+                                <td class="py-2 px-4 border-b">Alto (aprox. 2.5% o más)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-2 px-4 border-b font-bold">Resistencia a Roya</td>
+                                <td class="py-2 px-4 border-b">Susceptible</td>
+                                <td class="py-2 px-4 border-b">Resistente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <p class="text-center mt-4 text-sm">
+                    La Roya obligó a crear híbridos entre Arábica y Robusta, bajando la calidad general pero salvando la industria. Los cafés puros de altura (>1,500m) son escasos y de mayor calidad.
+                </p>
+            </div>
+        </section>
+
+        <section id="roasting-process" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">El Viaje del Grano: El Proceso Morichal</h2>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                El sabor final es la culminación de un proceso de cuatro etapas donde cada paso es crítico. Un error en cualquiera de ellas compromete la calidad. Morichal pone especial atención en el tueste para desarrollar su perfil de sabor característico.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex-1 text-center p-4 border-2 border-dashed border-[#EB6841] rounded-lg">
+                        <h4 class="text-lg font-bold">1. Cosecha</h4>
+                        <p class="text-sm">Selección exclusiva de café maduro (cereza roja) para evitar defectos.</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#6A4A3C] transform rotate-90 md:rotate-0">→</div>
+                    <div class="flex-1 text-center p-4 border-2 border-dashed border-[#EDC951] rounded-lg">
+                        <h4 class="text-lg font-bold">2. Secado</h4>
+                        <p class="text-sm">Uso de métodos controlados como la Cama Africana para un secado uniforme.</p>
+                    </div>
+                     <div class="text-2xl font-bold text-[#6A4A3C] transform rotate-90 md:rotate-0">→</div>
+                    <div class="flex-1 text-center p-4 border-2 border-solid border-[#CC333F] rounded-lg bg-red-50">
+                        <h4 class="text-lg font-bold text-[#CC333F]">3. Tueste Morichal</h4>
+                        <p class="text-sm font-bold">Inicio a 190°C. <br> "Primer Crack" entre 11-11.5 min. <br> Tueste medio-alto para el blend principal.</p>
+                    </div>
+                     <div class="text-2xl font-bold text-[#6A4A3C] transform rotate-90 md:rotate-0">→</div>
+                    <div class="flex-1 text-center p-4 border-2 border-dashed border-[#00A0B0] rounded-lg">
+                        <h4 class="text-lg font-bold">4. Preparación</h4>
+                        <p class="text-sm">Molienda y extracción adecuadas para el método de consumo final.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="extraction-sales" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#6A4A3C] mb-2 text-center">De Nuestra Bolsa a Su Taza</h2>
+             <p class="text-center max-w-3xl mx-auto mb-8">
+                La experiencia final del consumidor depende de la correcta preparación. Por ello, Morichal ofrece productos diferenciados y educa sobre la importancia de la molienda para lograr la extracción perfecta: el equilibrio ideal entre acidez, dulzura y amargor.
+            </p>
+             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Columna 1: Productos -->
+                <div class="lg:col-span-1 bg-white rounded-lg shadow-md p-6 flex flex-col space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-center mb-2 text-[#00A0B0]">Café Molido</h3>
+                        <p class="text-sm text-center">Dirigido al hogar y oficina. Molienda media-fina ideal para cafeteras de goteo y métodos de colado tradicionales (Otero).</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3 class="text-xl font-bold text-center mb-2 text-[#EB6841]">Café en Grano</h3>
+                        <p class="text-sm text-center">Dirigido a cafeterías y panaderías, permitiéndoles calibrar la molienda exacta para sus máquinas de espresso, V60, etc.</p>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Generador de Molienda con Gemini API -->
+                <div class="lg:col-span-1 bg-white rounded-lg shadow-md p-6 flex flex-col space-y-4">
+                    <h3 class="text-xl font-bold text-center mb-2 text-[#CC333F]">✨ Molienda Recomendada por AI</h3>
+                    <p class="text-sm text-center text-gray-600">
+                        Selecciona tu método de preparación para obtener la recomendación de molienda ideal y un consejo experto de nuestro Barista AI.
+                    </p>
+                    <select id="brewMethod" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00A0B0] focus:border-[#00A0B0] text-sm">
+                        <option value="Espresso">Espresso (Máquina de presión)</option>
+                        <option value="V60 / Pour-Over">V60 / Pour-Over (Colado manual)</option>
+                        <option value="Prensa Francesa">Prensa Francesa (Inmersión)</option>
+                        <option value="Cafetera de Goteo">Cafetera de Goteo (Eléctrica)</option>
+                    </select>
+                    <button id="recommendationButton" onclick="getGrindRecommendation()" class="w-full py-2 px-4 bg-[#6A4A3C] text-white font-bold rounded-lg hover:bg-[#EB6841] hover:text-gray-900 transition duration-300 shadow-md disabled:opacity-50">
+                        Generar Recomendación ✨
+                    </button>
+                    <div id="recommendationResult" class="mt-4 p-3 bg-gray-50 border-l-4 border-[#EDC951] text-sm italic min-h-[50px] text-gray-700">
+                        Esperando método...
+                    </div>
+                </div>
+
+                <!-- Columna 3: Gráfico de Extracción -->
+                <div class="lg:col-span-1 bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">El Triángulo de la Extracción Perfecta</h3>
+                    <div class="chart-container mx-auto">
+                        <canvas id="extractionBalanceChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-sm">
+                        Una extracción equilibrada es el objetivo de todo barista. Poca extracción resulta en acidez (sub-extracción), mientras que demasiada resulta en amargor (sobre-extracción). La molienda es la clave para controlar este balance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-6 bg-[#6A4A3C] text-white text-sm">
+        <p>Infografía generada con base en el "Análisis Exhaustivo y Minucioso de la Reunión sobre Café Morichal".</p>
+    </footer>
+
+    <script>
+        
+        const apiKey = "";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return await response.json();
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        async function getGrindRecommendation() {
+            const methodSelect = document.getElementById('brewMethod');
+            const selectedMethod = methodSelect.value;
+            const resultDiv = document.getElementById('recommendationResult');
+            const button = document.getElementById('recommendationButton');
+
+            resultDiv.innerHTML = '<span class="text-[#CC333F] animate-pulse">Generando consejo experto...</span>';
+            resultDiv.classList.add('border-[#CC333F]');
+            resultDiv.classList.remove('border-[#EDC951]');
+            button.disabled = true;
+
+            const systemPrompt = "Actúa como un experto barista y un analista de calidad de café. Tu respuesta debe ser una recomendación concisa y técnica en un solo párrafo. Describe la molienda ideal (Fina, Media, Gruesa, o variantes) y un consejo clave para la extracción perfecta con el método proporcionado. NO uses viñetas ni saltos de línea.";
+            const userQuery = `Recomienda el tamaño de molienda y un consejo clave para el método de preparación: ${selectedMethod}.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const responseJson = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const text = responseJson.candidates?.[0]?.content?.parts?.[0]?.text || "Error: No se pudo generar la recomendación.";
+                
+                resultDiv.innerHTML = text;
+                resultDiv.classList.add('border-[#00A0B0]'); 
+                resultDiv.classList.remove('border-[#CC333F]');
+
+            } catch (error) {
+                console.error("Gemini API call failed:", error);
+                resultDiv.innerHTML = 'Error de conexión. Intente nuevamente.';
+                resultDiv.classList.add('border-[#CC333F]');
+                resultDiv.classList.remove('border-[#00A0B0]');
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const processLabel = (label) => {
+                if (typeof label !== 'string' || label.length <= 16) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > 16) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(' ');
+                } else {
+                  return label;
+                }
+            };
+            
+            const defaultPlugins = {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            };
+
+            const consumerPreferenceCtx = document.getElementById('consumerPreferenceChart').getContext('2d');
+            new Chart(consumerPreferenceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Prefiere Café Fuerte', 'Otros Gustos'],
+                    datasets: [{
+                        label: 'Preferencia del Consumidor',
+                        data: [85, 15],
+                        backgroundColor: ['#6A4A3C', '#EDC951'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins
+                }
+            });
+
+            const marketBrandsCtx = document.getElementById('marketBrandsChart').getContext('2d');
+            new Chart(marketBrandsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Marcas Registradas', processLabel('Total Marcas Estimadas (incl. artesanales)')],
+                    datasets: [{
+                        label: 'Número de Marcas de Café',
+                        data: [417, 1000],
+                        backgroundColor: ['#00A0B0', '#EB6841'],
+                        borderColor: ['#008a99', '#d9572a'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                       ...defaultPlugins,
+                       legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            const blendCompositionCtx = document.getElementById('blendCompositionChart').getContext('2d');
+            new Chart(blendCompositionCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Origen Occidental', 'Origen Oriental'],
+                    datasets: [{
+                        label: 'Composición del Blend',
+                        data: [60, 40],
+                        backgroundColor: ['#CC333F', '#EB6841'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins
+                }
+            });
+            
+            const regionalProductionCtx = document.getElementById('regionalProductionChart').getContext('2d');
+            new Chart(regionalProductionCtx, {
+                type: 'bar',
+                data: {
+                    labels: [processLabel('Producción Lara (Occidente)'), processLabel('Producción Oriental (3 estados)')],
+                    datasets: [{
+                        label: '% de Producción Nacional',
+                        data: [28, 14],
+                        backgroundColor: ['#6A4A3C', '#EDC951'],
+                        borderColor: ['#523a2f', '#d5b33a'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                     plugins: {
+                       ...defaultPlugins,
+                       legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                           beginAtZero: true,
+                           ticks: {
+                               callback: function(value) {
+                                   return value + '%'
+                               }
+                           }
+                        }
+                    }
+                }
+            });
+            
+            const extractionBalanceCtx = document.getElementById('extractionBalanceChart').getContext('2d');
+            new Chart(extractionBalanceCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Acidez (Sub-Extracción)', 'Dulzura (Equilibrio)', 'Amargor (Sobre-Extracción)'],
+                    datasets: [{
+                        label: 'Extracción Equilibrada',
+                        data: [6, 9, 7],
+                        backgroundColor: 'rgba(0, 160, 176, 0.2)',
+                        borderColor: '#00A0B0',
+                        pointBackgroundColor: '#00A0B0',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#00A0B0'
+                    }, {
+                        label: 'Extracción Desbalanceada',
+                        data: [8, 4, 9],
+                        backgroundColor: 'rgba(204, 51, 63, 0.2)',
+                        borderColor: '#CC333F',
+                        pointBackgroundColor: '#CC333F',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#CC333F'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: false
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
